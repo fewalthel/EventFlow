@@ -1,0 +1,35 @@
+.selected_category__places {
+    border: 0.01vw solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 2vw;
+    padding: 0.5vw 2vw 0.5vw 2vw;
+    margin-right: 3vw;
+}
+
+.selected_category__events {
+    border: 0.01vw solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: white;
+    border-radius: 2vw;
+    padding: 0.5vw 2vw 0.5vw 2vw;
+    margin-right: 3vw;
+}
+
+.categories_container {
+    display: flex;
+    align-items: center;
+    margin: 2vw 0 2vw 5.07vw;
+}
+
+.categories_container > *{
+    cursor: pointer;
+}
+
+.default_category {
+    border: 0.01vw solid black;
+    background-color: white;
+    border-radius: 2vw;
+    padding: 0.5vw 2vw 0.5vw 2vw;
+    margin-right: 3vw;
+}

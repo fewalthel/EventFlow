@@ -1,0 +1,54 @@
+// .info_section {
+//   margin-top: 10vw;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+//  .place_info {
+//   width: 50vw;
+// }
+
+// .map {
+//   width: 60vw;
+// }
+
+.event_container {
+  margin-top: 7.92vw;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 1vw;
+  width: 89.141vw;
+  height: 45.641vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4vw;
+  position: relative;
+  left: 5.313vw;
+  overflow: hidden;
+}
+
+.container_for_secondary_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 89.141vw;
+  margin-left: 5.313vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.map, .place_description {
+  width: 49%;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 1vw;
+  height: 25vw;
+  border-radius: 4vw;
+  overflow: hidden;
+}
+
+.place_description {
+  padding: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

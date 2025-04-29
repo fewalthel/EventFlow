@@ -1,0 +1,28 @@
+.primary_info {
+    width: 68.40vw;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    padding: 1.74vw 3.61vw;
+    border-radius: 0 0 0 3vw;
+  
+    > h1 {
+      font-size: 4rem !important;
+      margin-bottom: 1vw;
+      margin-top: 4vw;
+    }
+
+    > * {
+      margin-left: 0;
+    }
+  }
+
+.section {
+    margin-top: -4.5vw;
+    position: relative;
+  
+    > img {
+      width: 100vw;
+      top: -4.5vw;
+    }
+  }

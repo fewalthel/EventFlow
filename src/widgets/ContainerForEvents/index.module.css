@@ -1,0 +1,8 @@
+.container_for_posters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    margin-left: 3.3vw;
+    width: 94vw;
+    min-height: 35vw;
+}

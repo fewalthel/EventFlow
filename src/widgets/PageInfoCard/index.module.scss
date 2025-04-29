@@ -1,0 +1,49 @@
+.event_info_container {
+  background-color: rgba(56, 56, 56, 0.4);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  z-index: 2;
+  top: 3.82vw;
+  left: 4.722vw;
+  border-radius: 3vw;
+  color: white;
+  width: 44.584vw;
+  height: 38.334vw;
+
+  div {
+    p {
+      &:not(:first-child) {
+        font-size: 1.52rem;
+        margin-bottom: 1.5vw;
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        width: 3.611vw;
+        height: 3.611vw;
+        padding-right: 1.5vw;
+      }
+    }
+  }
+}
+
+.event_title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5vw;
+}
+
+.button {
+  background-color: var(--primary-color);
+  border-radius: 50vw;
+  text-decoration: none;
+  font-size: 0.8rem;
+  width: 16.597vw;
+  height: 2.7vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}

@@ -1,0 +1,14 @@
+.event_image {
+    overflow: hidden;
+    width: 89.141vw;
+    height:  45.641vw;
+}
+
+.event_image > img {
+    width: 89.141vw;
+    height:  45.641vw;
+
+    object-fit: cover;
+    object-position: center;
+
+}

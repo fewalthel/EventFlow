@@ -1,0 +1,13 @@
+.event_container {
+    margin-top: 7.92vw;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 1vw;
+    width: 89.141vw;
+    height: 45.641vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4vw;
+    position: relative;
+    left: 5.313vw;
+    overflow: hidden;
+}

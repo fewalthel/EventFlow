@@ -1,0 +1,29 @@
+.section {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    position: absolute;
+    top: 1.8vw;
+    margin-left: 5.07vw;
+}
+
+.event_posters_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35vw;
+}
+
+.visible_event_posters_container {
+    width: 94vw;
+    overflow: scroll;
+    height: auto;
+    transform: translateX(3vw);
+    margin-top: 7vw;
+}

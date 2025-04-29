@@ -1,0 +1,13 @@
+.poster_image {
+    height: 15vw;
+    overflow: hidden;
+    border-radius: 2vw;
+}
+
+.poster_image > * {
+    width: 20vw;
+    height: 15vw;
+
+    object-fit: cover;
+    object-position: center;
+}

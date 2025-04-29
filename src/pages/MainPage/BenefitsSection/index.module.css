@@ -1,0 +1,31 @@
+.benefits_section > .grid_container {
+    display: flex;
+    justify-content: space-between;
+    width: 89.03vw;
+}
+
+.grid_container {
+    display: flex;
+    height: 56vw;
+}
+
+.benefits_section {
+    height: 64vw;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(white, var(--primary-color));
+}
+
+.right_column > img {
+    width: 44.03vw;
+}
+
+.right_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44.03vw;
+    align-items: center;
+}
