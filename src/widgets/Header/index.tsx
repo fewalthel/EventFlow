@@ -27,9 +27,9 @@ export const Header: FC<HeaderProps> = ({ onSignInClick }) => {
             <nav className={styles.desktop_header_nav}>
                 <ul>
                     <li>
-                        <a href="/#about" className={styles.header_link}>
+                        <Link to="/" className={styles.header_link}>
                             о проекте
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <Link to="/events" className={styles.header_link}>

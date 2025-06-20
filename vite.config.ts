@@ -5,6 +5,7 @@ import path from 'path';
 
 export default defineConfig({
     plugins: [react(), tsconfigPaths()],
+    base: '/EventFlow/',
     resolve: {
         alias: {
             '@utils': path.resolve(__dirname, 'src/utils'),

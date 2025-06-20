@@ -1,6 +1,9 @@
 import styles from './index.module.scss';
 import {formattedDate} from "@utils/formattedDate";
 import {Event, Place, People} from "@entities/interfaces";
+import calendarIconWhite from '../../assets/calendar_icon__white.svg';
+import locationIcon2 from '../../assets/location_icon_2.svg';
+import walletIcon from '../../assets/wallet_icon.svg';
 
 export const isEvent = (entity: Event | Place | People): entity is Event => {
     return "price" in entity;
@@ -19,7 +22,7 @@ const EventInfo = ({event}: EventInfoProps) => (
         <p className={styles.event_title}>{event.title}</p>
         <p className={styles.event_date}>
             <img
-                src="/vector-icons/calendar_icon__white.svg"
+                src={calendarIconWhite}
                 alt="calendar icon"
                 aria-hidden="true"
             />
@@ -27,7 +30,7 @@ const EventInfo = ({event}: EventInfoProps) => (
         </p>
         <p className={styles.event_location}>
             <img
-                src="/vector-icons/location_icon_2.svg"
+                src={locationIcon2}
                 alt="location icon"
                 aria-hidden="true"
             />
@@ -35,7 +38,7 @@ const EventInfo = ({event}: EventInfoProps) => (
         </p>
         <p className={styles.event_price}>
             <img
-                src="/vector-icons/wallet_icon.svg"
+                src={walletIcon}
                 alt="wallet icon"
                 aria-hidden="true"
             />
@@ -61,7 +64,7 @@ const PlaceInfo = ({place}: PlaceInfoProps) => (
         <p className={styles.event_title}>{place?.title}</p>
         <p className={styles.event_location}>
             <img
-                src="/vector-icons/location_icon_2.svg"
+                src={locationIcon2}
                 alt="location icon"
                 aria-hidden="true"
             />
@@ -89,7 +92,7 @@ const PeopleInfo = ({people}: PeopleInfoProps) => (
         {(people?.city) ?
             (<h3 className={styles.people_city}>
                 <img
-                    src="/vector-icons/location_icon_2.svg"
+                    src={locationIcon2}
                     alt="location icon"
                     aria-hidden="true"/>
                 {people?.city}

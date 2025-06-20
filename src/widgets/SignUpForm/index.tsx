@@ -2,6 +2,8 @@ import {useForm} from 'react-hook-form';
 import styles from './index.module.scss';
 import {useState} from 'react';
 import { registerUser } from '../../api/auth';
+import eyeOffIcon from '../../assets/eye-off-svgrepo-com.svg';
+import eyeShowIcon from '../../assets/eye-show-svgrepo-com.svg';
 
 function RegistrationForm() {
     const {register, handleSubmit, formState: {errors}} = useForm();
@@ -69,7 +71,7 @@ function RegistrationForm() {
                     <button type="button" onClick={() => setShowPassword(v => !v)}
                             className={styles.authForm__showPasswordBtn} tabIndex={-1} aria-label="Показать пароль">
                         <img
-                            src={showPassword ? '/vector-icons/eye-off-svgrepo-com.svg' : '/vector-icons/eye-show-svgrepo-com.svg'}
+                            src={showPassword ? eyeOffIcon : eyeShowIcon}
                             alt={showPassword ? 'Скрыть пароль' : 'Показать пароль'}
                             className={styles.authForm__eyeIcon}
                         />

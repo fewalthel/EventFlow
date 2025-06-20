@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { setUser } from '../../store/userSlice';
 import { login, getUser, refreshTokenRequest, verify } from '../../api/auth';
 import { Index as Modal } from '../Modal';
+import eyeOffIcon from '../../assets/eye-off-svgrepo-com.svg';
+import eyeShowIcon from '../../assets/eye-show-svgrepo-com.svg';
 
 export const SignInForm = ({onSignUpClick}: { onSignUpClick?: () => void }) => {
     const {
@@ -24,6 +26,7 @@ export const SignInForm = ({onSignUpClick}: { onSignUpClick?: () => void }) => {
     const [codeError, setCodeError] = useState<string | null>(null);
     const dispatch = useDispatch();
     const [code, setCode] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
     // Отправка email для получения кода
     const onSubmit = async (data: any) => {
@@ -118,6 +121,10 @@ export const SignInForm = ({onSignUpClick}: { onSignUpClick?: () => void }) => {
                     </button>
                 </form>
             </Modal>
+            <img src={showPassword ? eyeOffIcon : eyeShowIcon}
+                 alt={showPassword ? 'Скрыть пароль' : 'Показать пароль'}
+                 className={styles.authForm__eyeIcon}
+            />
         </div>
     );
 };

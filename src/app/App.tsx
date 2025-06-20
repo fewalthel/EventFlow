@@ -23,7 +23,7 @@ function App() {
     const closeSignInModal = () => setSignInOpen(false);
 
     return (
-        <Router>
+        <Router basename="/EventFlow">
             <Header onSignInClick={() => setSignInOpen(true)} />
             <Routes>
                 <Route path="/" element={<MainPage/>}/>
