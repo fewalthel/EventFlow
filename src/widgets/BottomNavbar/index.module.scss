@@ -1,0 +1,56 @@
+.bottomNav {
+  display: none; /* Hidden by default, shown via media query */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 8px;
+  z-index: 1000;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+
+  &.active {
+    color: var(--primary-color, #0C67F0);
+
+    .navIcon {
+      /* This filter recolors a black SVG to the primary color */
+      filter: invert(34%) sepia(97%) saturate(1471%) hue-rotate(198deg) brightness(96%) contrast(92%);
+    }
+  }
+}
+
+.navIcon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.navLabel {
+  font-size: 12px;
+}
+
+/* Show only on mobile */
+@media (max-width: 960px) {
+  .bottomNav {
+    display: flex;
+  }
+} 

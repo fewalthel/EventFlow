@@ -3,7 +3,9 @@ import {EVENTS, PEOPLES, PLACES} from "@utils/__mocks__";
 import {Event, Place, People} from "@entities/interfaces";
 import {ContainerForPlaces} from "@widgets/ContainerForPlaces";
 import {ContainerForEvents} from "@widgets/ContainerForEvents";
-import styles from './index.module.css';
+import styles from "./index.module.css";
+import {PeoplePoster} from "@widgets/PeoplePoster";
+import {Link} from "react-router-dom";
 
 type SearchCategory = 'places' | 'events' | 'peoples';
 type SearchEntity = Place | Event | People;
@@ -84,13 +86,13 @@ export const SearchPage = () => {
                                 case 'places':
                                     return <ContainerForPlaces placesList={searchResults as Place[]}/>
                                 default:
-                                    <ul className={styles.resultsList}>
-                                        {(searchResults as People[]).map(item => (
-                                            <li key={String(item.id)} className={styles.resultItem}>
-                                                {item.firstName}
-                                            </li>
+                                    return <div className={styles.resultsList}>
+                                        {(searchResults as People[]).map(people => (
+                                            <Link to={`/people?id=${people.id}`}>
+                                                <PeoplePoster key={people.id} people={people}/>
+                                            </Link>
                                         ))}
-                                    </ul>
+                                    </div>
                             }
                         }
                     )() : (

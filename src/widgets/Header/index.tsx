@@ -1,8 +1,12 @@
 import {Link} from "react-router-dom";
-import styles from './index.module.css'
+import styles from './index.module.scss'
 import {FC, useState, useEffect} from "react";
 
-export const Header: FC = () => {
+interface HeaderProps {
+    onSignInClick?: () => void;
+}
+
+export const Header: FC<HeaderProps> = ({ onSignInClick }) => {
     const [showHeader, setShowHeader] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
 
@@ -38,9 +42,9 @@ export const Header: FC = () => {
                         </Link>
                     </li>
                     <li className={styles.primary_buttons}>
-                        <Link to="/sign_in" className={styles.button}>
+                        <button type="button" className={styles.button} onClick={onSignInClick}>
                             войти
-                        </Link>
+                        </button>
                         <Link className={styles.search_button} to="/search"/>
                     </li>
                 </ul>

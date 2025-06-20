@@ -1,0 +1,144 @@
+// Основные стили
+.event_container {
+  margin-top: 7.92vw;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 1vw;
+  width: 89.141vw;
+  height: 45.641vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4vw;
+  position: relative;
+  left: 5.313vw;
+  overflow: hidden;
+}
+
+.main {
+  min-height: 60vh;
+}
+
+.container_for_secondary_info {
+  margin: 2vw auto 0 auto;
+  width: 89.141vw;
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  justify-content: flex-start;
+
+  .event_description {
+    width: 49%;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 1vw;
+    height: 25vw;
+    border-radius: 4vw;
+    overflow: hidden;
+    padding: 3vw;
+  }
+}
+
+.location_info_block {
+  margin: 2vw auto 0 auto;
+  width: 89.141vw;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2vw;
+  padding: 2vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.08);
+  min-width: 0;
+  font-size: 1.1rem;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1vw;
+    font-size: 1.2rem;
+    color: #03477F;
+  }
+}
+
+// Медиазапросы
+// Мобилки: 375px - 960px
+@media (max-width: 960px) {
+  .event_container {
+    margin-top: 4vw;
+    width: 92vw;
+    height: 39vh;
+    left: 4vw;
+    border-radius: 3vw;
+  }
+
+  .container_for_secondary_info {
+    width: 92vw;
+    flex-direction: column;
+    gap: 3vw;
+    margin-left: 4vw;
+
+    .event_description,
+    .map {
+      width: 100%;
+      height: 30vw;
+      border-radius: 3vw;
+    }
+  }
+
+  .location_info_block {
+    width: 92vw;
+    margin: 4vw;
+    font-size: 1.3rem;
+    border-radius: 3vw;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+// Планшеты: 960px - 1200px
+@media (min-width: 961px) and (max-width: 1200px) {
+  .event_container {
+    margin-top: 6vw;
+    width: 90vw;
+    height: 40vw;
+    left: 5vw;
+  }
+
+  .container_for_secondary_info {
+    width: 90vw;
+    gap: 2.5vw;
+    margin-left: 5vw;
+
+    .event_description,
+    .map {
+      height: 28vw;
+    }
+  }
+
+  .location_info_block {
+    width: 90vw;
+    margin-left: 5vw;
+    font-size: 1.2rem;
+  }
+}
+
+// Десктопы: от 1200px
+@media (min-width: 1201px) {
+  .event_container {
+    margin-top: 7.92vw;
+    width: 89.141vw;
+    height: 45.641vw;
+    left: 5.313vw;
+  }
+
+  .container_for_secondary_info {
+    width: 89.141vw;
+    gap: 2vw;
+
+    .event_description,
+    .map {
+      height: 25vw;
+    }
+  }
+
+  .location_info_block {
+    width: 89.141vw;
+    font-size: 1.1rem;
+  }
+}

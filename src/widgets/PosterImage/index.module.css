@@ -11,3 +11,24 @@
     object-fit: cover;
     object-position: center;
 }
+
+@media (max-width: 960px) {
+    .poster_image {
+        width: 100%;
+        height: 35vw;
+        overflow: hidden;
+        border-radius: 2vw;
+    }
+
+    .poster_image > * {
+        width: 100%;
+        height: 35vw;
+
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@media (min-width: 961px) and (max-width: 1200px) {
+    margin-top: 10vw;
+}

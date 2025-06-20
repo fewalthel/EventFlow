@@ -4,19 +4,25 @@
 
 .default {
     background: white;
+
 }
 
 .container {
     min-height: calc(100vh - 12vw);
 }
 
-.searchBox, .categories_container, .hint {
+.searchBox, .categories_container, .hint, .noResults, .resultsList {
     margin-left: 5.05vw;
+}
+
+.hint, .noResults, .resultsList {
+    margin-top: 1vw;
 }
 
 .searchBox {
     position: relative;
-    width: 30vw;
+    width: 90vw;
+    margin-bottom: 3vw;
 }
 
 .search_input {
@@ -62,4 +68,30 @@
     border-radius: 2vw;
     padding: 0.5vw 2vw 0.5vw 2vw;
     margin-right: 3vw;
+    color: black;
+}
+
+.title {
+    margin-left: 5vw;
+}
+
+@media (max-width: 960px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .search_input {
+        padding: 2vw 1vw;
+        border-radius: 4vw;
+        width: 90vw;
+        margin-top: 2vw;
+    }
+
+    .searchButton {
+        right: 0;
+        top: 2vw;
+        left: 70vw;
+        padding: 1vw 2vw;
+        border-radius: 2vw;
+    }
 }

@@ -1,0 +1,59 @@
+@media (max-width: 960px) {
+    .info_card_container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 40%;
+        background-color: white;
+        border-radius: 5vw 5vw 0 0;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0 5vw;
+    }
+
+    .info_card_container > .flex_container:first-child {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info_card_container > .flex_container:first-child > :first-child { /* FIO container */
+        order: 2;
+        margin-top: 7vw;
+    }
+
+    .info_card_container > .flex_container:first-child > :last-child { /* button */
+        order: 1;
+        position: absolute;
+        top: -5vw;
+        width: 40vw;
+        height: 10vw;
+        border-radius: 5vw;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .info_card_container .flex_container:first-child h2 { /* FIO */
+        font-size: 2rem;
+    }
+
+    .info_card_container > p { /* about */
+        color: gray;
+        font-size: 1rem;
+        margin-top: 4vw;
+    }
+
+    .info_card_container > p > span {
+        color: black;
+        font-size: 1.1rem;
+        display: block;
+    }
+
+    .info_card_container > .flex_container:last-child { /* location */
+        margin-top: 4vw;
+        justify-content: center;
+    }
+} 

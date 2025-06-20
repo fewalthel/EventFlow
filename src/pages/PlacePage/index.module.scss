@@ -1,23 +1,8 @@
-// .info_section {
-//   margin-top: 10vw;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-//  .place_info {
-//   width: 50vw;
-// }
-
-// .map {
-//   width: 60vw;
-// }
-
 .event_container {
   margin-top: 7.92vw;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 1vw;
   width: 89.141vw;
-  height: 45.641vw;
+  height: 30vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +20,7 @@
   margin-left: 5.313vw;
   margin-top: 2vw;
   margin-bottom: 2vw;
+  height: auto;
 }
 
 .map, .place_description {
@@ -51,4 +37,63 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.1rem;
+}
+
+/* Мобилки: 375px - 960px */
+@media (max-width: 960px) {
+  .event_container {
+    margin-top: 4vw;
+    width: 92vw;
+    height: 30vh;
+    left: 4vw;
+    border-radius: 3vw;
+    padding: 0;
+  }
+  
+  .container_for_secondary_info {
+    width: 92vw;
+    margin-left: 4vw;
+    flex-direction: column;
+    gap: 3vw;
+    bottom: 0;
+  }
+  
+  .map, .place_description {
+    width: 100%;
+    height: 50dvh;
+    border-radius: 3vw;
+  }
+  
+  .place_description {
+    padding: 4vw;
+    font-size: 1.3rem;
+    height: auto;
+  }
+}
+
+/* Планшеты: 960px - 1200px */
+@media (min-width: 961px) and (max-width: 1200px) {
+  .event_container {
+    margin-top: 6vw;
+    width: 90vw;
+    height: 40vw;
+    left: 5vw;
+  }
+  
+  .container_for_secondary_info {
+    width: 90vw;
+    margin-left: 5vw;
+    gap: 2.5vw;
+  }
+  
+  .map{
+    height: 28vw;
+  }
+  
+  .place_description {
+    padding: 1.5vw;
+    font-size: 1.2rem;
+    height: auto;
+  }
 }

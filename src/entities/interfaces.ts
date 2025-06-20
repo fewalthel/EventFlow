@@ -1,3 +1,12 @@
+export enum Role {
+    USER = 'USER',
+    ADMIN = 'ADMIN',
+    GUEST = 'GUEST',
+    ORGANIZER = 'ORGANIZER',
+    PLATFORM = 'PLATFORM',
+    SUPER = 'SUPER'
+}
+
 export interface People {
     id: number,
     about?: string,
@@ -8,7 +17,7 @@ export interface People {
     lastName: string,
     city?: string,
     isPublicProfile: boolean,
-    role: 'USER' | 'ADMIN' | 'GUEST' | 'ORGANIZER' | 'PLATFORM' | 'SUPER'
+    role: Role
 }
 
 export interface Event {
@@ -20,6 +29,7 @@ export interface Event {
     pathToImage: string,
     description?: string,
     category: Category
+    place?: Place
 }
 
 export interface Place {
@@ -28,7 +38,7 @@ export interface Place {
     location: string;
     description: string;
     category: Category;
-    pathToImage?: string;
+    pathToImage: string;
     coordinats: number[]
 }
 

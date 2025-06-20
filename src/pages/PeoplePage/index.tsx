@@ -4,7 +4,7 @@ import {People} from "@entities/interfaces";
 import {PageEntityImage} from "@widgets/PageEntityImage";
 import {PageInfoCard} from "@widgets/PageInfoCard";
 import {NotFoundPage} from "@pages/NotFoundPage";
-import styles from './index.module.css'
+import styles from './index.module.css';
 
 export const PeoplePage = () => {
     const location = useLocation();
@@ -16,7 +16,6 @@ export const PeoplePage = () => {
         <main className={styles.main}>
             <PageEntityImage path={people.pathToAvatar}/>
             <PageInfoCard entity={people}/>
-            <p>{people.firstName}</p>
         </main>
     ) : <NotFoundPage/>
 

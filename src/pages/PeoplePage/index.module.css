@@ -1,7 +1,24 @@
 .main {
-    margin-top: 5vw;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
+}
+
+@media (max-width: 960px) {
+    .main {
+        display: block;
+        position: relative;
+        width: 90vw;
+        height: 150vw;
+        margin: 5vw auto;
+        border-radius: 5vw;
+        box-shadow: 0 0 2vw rgba(0,0,0,0.2);
+        overflow: hidden;
+    }
+
+    .main > div:first-child,
+    .main > div:first-child img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }

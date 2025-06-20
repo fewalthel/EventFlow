@@ -10,16 +10,17 @@ interface Props {
     eventsList: Event[]
 }
 
-export const ContainerForEvents: FC<Props> = ({eventsList}: Props) => {
-    return <div className={styles.container_for_posters}>
-        {eventsList.map((event: Event) => (
-            <Fragment key={event.id}>
-                <Suspense fallback={<WaitingEventPoster/>}>
-                    <Link to={`/event?id=${event.id}`}>
-                        <LazyEventPoster event={event}/>
-                    </Link>
-                </Suspense>
-            </Fragment>
-        ))}
-    </div>
-}
+export const ContainerForEvents: FC<Props> = React.memo<Props>(({eventsList}: Props) => (
+        <div className={styles.container_for_posters}>
+            {eventsList.map((event: Event) => (
+                <Fragment key={event.id}>
+                    <Suspense fallback={<WaitingEventPoster/>}>
+                        <Link to={`/event?id=${event.id}`}>
+                            <LazyEventPoster event={event}/>
+                        </Link>
+                    </Suspense>
+                </Fragment>
+            ))}
+        </div>
+    )
+);

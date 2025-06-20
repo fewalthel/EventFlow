@@ -15,11 +15,11 @@ const EventPoster = ({event}: Props) => {
             <div className={styles.event_poster_container_info}>
                 <p className={styles.event_title}>{event?.title}</p>
                 <p className={styles.event_date}>
-                    <img src="/vector-icons/calendar_icon_1.svg" alt='calendar icon' aria-readonly='false'/>
+                    <img src="/vector-icons/calendar_icon_1.svg" alt='calendar icon'/>
                     {formattedDate(event?.date)}
                 </p>
                 <p className={styles.event_location}>
-                    <img src="/vector-icons/location_icon_1.svg" alt='location icon' aria-readonly='false'/>
+                    <img src="/vector-icons/location_icon_1.svg" alt='location icon'/>
                     {event?.location}
                 </p>
                 <p className={styles.event_price}>{event?.price}₽</p>

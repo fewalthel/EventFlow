@@ -27,3 +27,18 @@
     transform: translateX(3vw);
     margin-top: 7vw;
 }
+
+
+@media (max-width: 960px) {
+    .section {
+        height: 80dvh;
+        margin-top: 24dvh;
+    }
+
+    .visible_event_posters_container  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60dvh;
+    }
+}

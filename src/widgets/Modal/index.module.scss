@@ -1,0 +1,137 @@
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  overflow: hidden;
+}
+
+.modal__content {
+  position: relative;
+  z-index: 2;
+  border-radius: 3vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.2);
+  padding: 1vw;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.75rem;
+  overflow: hidden;
+
+  @media (max-width: 960px) {
+    padding: 4vw 2vw;
+    border-radius: 4vw;
+    font-size: 1.1rem;
+    min-width: 0;
+    max-width: 90vw;
+  }
+
+  @media (min-width: 961px) and (max-width: 1200px) {
+    padding: 2vw;
+    border-radius: 3vw;
+    font-size: 1rem;
+    min-width: 0;
+    max-width: 80vw;
+  }
+  @media (min-width: 1201px) {
+    padding: 1vw;
+    border-radius: 0.75vw;
+    font-size: 0.75rem;
+    min-width: 175px;
+    max-width: 45vw;
+  }
+}
+
+.modal__gradientBg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  transform: translate(-50%, -50%);
+  border-radius: 3vw;
+  z-index: 1;
+  pointer-events: none;
+  background: conic-gradient(
+                  from 0deg,
+                  #075ee0 0%,
+                  #023b69 30%,
+                  #6996dc 60%,
+                  #075ee0 100%
+  );
+  animation: modal-gradient-rotate 12s linear infinite;
+  filter: blur(2vw) brightness(1.1);
+  @media (max-width: 960px) {
+    width: 250vw;
+    height: 250vw;
+    border-radius: 8vw;
+  }
+  @media (min-width: 961px) and (max-width: 1200px) {
+    width: 120vw;
+    height: 120vw;
+    border-radius: 5vw;
+  }
+  @media (min-width: 1201px) {
+    width: 200%;
+    height: 200%;
+    border-radius: 3vw;
+  }
+}
+
+@keyframes modal-gradient-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.modal__closeBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 3;
+  padding: 0.5vw 0.8vw;
+}
+
+.modal__content > *:not(.modal__gradientBg) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Мобилки: 375px - 960px */
+@media (max-width: 960px) {
+  .modal__closeBtn {
+    font-size: 2rem;
+    padding: 1vw 1.5vw;
+  }
+}
+
+/* Планшеты: 960px - 1200px */
+@media (min-width: 961px) and (max-width: 1200px) {
+  .modal__closeBtn {
+    font-size: 1.2rem;
+    padding: 0.7vw 1.2vw;
+  }
+}
+
+/* Десктопы: от 1200px */
+@media (min-width: 1201px) {
+  .modal__closeBtn {
+    font-size: 1rem;
+    padding: 0.5vw 0.8vw;
+  }
+} 

@@ -1,4 +1,4 @@
-import {Category, People, Place, Event} from "@entities/interfaces";
+import {Category, Event, People, Place, Role} from "@entities/interfaces";
 
 export const PEOPLES: People[] = [
     {
@@ -8,7 +8,7 @@ export const PEOPLES: People[] = [
         about: 'директор ИТИС КФУ',
         pathToAvatar: 'michael.jpg',
         login: 'abramichael',
-        role: 'USER',
+        role: Role.USER,
         email: "abramichael@mail.com",
         city: 'Казань',
         isPublicProfile: true
@@ -127,7 +127,8 @@ export const EVENTS: Event[] = [
         category: {
             id: 3,
             title: 'выставки'
-        }
+        },
+        description: 'Фестиваль медиаискусства НУР проводится не в первый раз. На нём можно будет посмотреть на инсталляции современных художников, а также познакомиться с единомышленниками'
     },
 
     {
@@ -142,6 +143,7 @@ export const EVENTS: Event[] = [
                 id: 1,
                 title: 'ментальное здоровье'
             }
+        , description: 'Йога помогает привести в порядок разум и расслабиться'
     },
     {
         id: 3,

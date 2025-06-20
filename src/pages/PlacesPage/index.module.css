@@ -1,6 +1,8 @@
-h1 {
+.h1 {
     margin-top: 6.92vw;
     margin-left: 5.07vw;
+    font-size: 2.5rem;
+    text-align: left;
 }
 
 .container_for_null_posters {
@@ -8,4 +10,33 @@ h1 {
     justify-content: center;
     align-items: center;
     min-height: 40.45vw;
+    font-size: 1.2rem;
+}
+
+/* Мобилки: 375px - 960px */
+@media (max-width: 960px) {
+    .h1 {
+        margin-top: 4vw;
+        margin-left: 6vw;
+        font-size: 2rem;
+    }
+    
+    .container_for_null_posters {
+        min-height: 50vw;
+        font-size: 1.4rem;
+    }
+}
+
+/* Планшеты: 960px - 1200px */
+@media (min-width: 961px) and (max-width: 1200px) {
+    .h1 {
+        margin-top: 5vw;
+        margin-left: 4vw;
+        font-size: 2.2rem;
+    }
+    
+    .container_for_null_posters {
+        min-height: 45vw;
+        font-size: 1.3rem;
+    }
 }

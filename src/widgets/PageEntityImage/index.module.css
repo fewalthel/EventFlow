@@ -10,5 +10,16 @@
 
     object-fit: cover;
     object-position: center;
+}
 
+@media (max-width: 960px) {
+    .event_image {
+        height: 39vh;
+        width: 100%;
+    }
+
+    .event_image > img {
+        height: 39vh;
+        width: 100%;
+    }
 }

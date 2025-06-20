@@ -22,7 +22,7 @@ export const PlacesPage: FC = () => {
 
     return (
         <main>
-            <h1>ИНТЕРЕСНЫЕ МЕСТА ПО КАТЕГОРИЯМ</h1>
+            <h1 className={styles.h1}>ИНТЕРЕСНЫЕ МЕСТА ПО КАТЕГОРИЯМ</h1>
             <CategoriesOfContent filterByCategory={filterByCategory} entity="Place"/>
             {filteredPlaces.length > 0 ? (
                 <ContainerForPlaces placesList={filteredPlaces}/>

@@ -1,0 +1,271 @@
+.authForm {
+  overflow: hidden;
+  &__container {
+    background: transparent !important;
+    overflow: hidden;
+    border-radius: 2.25vw;
+    width: 36.4455vw;
+    height: auto;
+    min-height: 18.75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5vw;
+    margin: 0 auto;
+    position: relative;
+    animation: rotate-gradient 6s linear infinite;
+    background-size: 200% 200%;
+    background-position: center;
+    /* Для анимации градиента */
+    z-index: 1;
+    overflow: hidden;
+
+    @media (max-width: 960px) {
+      width: 90%;
+      border-radius: 5vw;
+      padding: 4vw 2vw;
+    }
+
+    @media (min-width: 961px) and (max-width: 1200px) {
+      width: 60vw;
+      min-height: 20vw;
+      padding: 2vw;
+      border-radius: 3vw;
+    }
+    @media (min-width: 1201px) {
+      width: 36.4455vw;
+      min-height: 18.75vw;
+      padding: 1.5vw;
+      border-radius: 2.25vw;
+    }
+  }
+
+  @keyframes rotate-gradient {
+    0% {
+      background-image: linear-gradient(0deg, var(--primary-color), #03477F);
+    }
+    100% {
+      background-image: linear-gradient(360deg, var(--primary-color), #03477F);
+    }
+  }
+
+  &__showPasswordBtn {
+    position: absolute;
+    right: 0.75vw;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #333;
+    z-index: 2;
+  }
+
+  &__eyeIcon {
+    width: 1.2em;
+    height: 1.2em;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    display: inline-block;
+    vertical-align: middle;
+    pointer-events: none;
+  }
+
+  &__showPasswordBtn:hover .authForm__eyeIcon,
+  &__showPasswordBtn:focus .authForm__eyeIcon {
+    opacity: 1;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 26.0415vw;
+    justify-content: space-between;
+    gap: 1.125vw;
+    color: white;
+    border-radius: 1.5vw;
+    padding: 0.75vw;
+    font-size: 0.75rem;
+
+    @media (max-width: 960px) {
+      width: 90%;
+      gap: 3vw;
+      font-size: 1.1rem;
+      border-radius: 3vw;
+      padding: 2vw 0;
+    }
+    @media (min-width: 961px) and (max-width: 1200px) {
+      width: 90%;
+      gap: 2vw;
+      font-size: 1rem;
+      border-radius: 2vw;
+      padding: 1vw 0;
+    }
+    @media (min-width: 1201px) {
+      width: 26.0415vw;
+      gap: 1.125vw;
+      font-size: 0.75rem;
+      border-radius: 1.5vw;
+      padding: 0.75vw;
+    }
+  }
+
+  &__title {
+    font-size: 0.975rem;
+    margin-bottom: 0.75vw;
+    color: white;
+    text-align: center;
+
+    @media (max-width: 960px) {
+      font-size: 1.5rem;
+      margin-bottom: 2vw;
+    }
+    @media (min-width: 961px) and (max-width: 1200px) {
+      font-size: 1.3rem;
+      margin-bottom: 1.5vw;
+    }
+    @media (min-width: 1201px) {
+      font-size: 0.975rem;
+      margin-bottom: 0.75vw;
+    }
+  }
+
+  &__inputGroup {
+    width: 100%;
+    position: relative;
+
+    &--error {
+      input, select {
+        border: 1px solid #ff6b6b !important;
+      }
+    }
+  }
+
+  &__input, &__select {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 1.5vw;
+    padding: 0.75vw;
+    outline: none;
+    border: none;
+    font-size: 0.75rem;
+
+    @media (max-width: 960px) {
+      padding: 2vw;
+      border-radius: 4vw;
+      font-size: 1.1rem;
+    }
+    @media (min-width: 961px) and (max-width: 1200px) {
+      padding: 1.5vw;
+      border-radius: 3vw;
+      font-size: 1rem;
+    }
+    @media (min-width: 1201px) {
+      padding: 0.75vw;
+      border-radius: 1.5vw;
+      font-size: 0.75rem;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    background-color: white;
+  }
+
+  &__error {
+    color: #ff6b6b;
+    font-size: 0.6rem;
+    margin-top: 0.225vw;
+    position: absolute;
+    bottom: -1.125vw;
+    left: 0;
+
+    @media (max-width: 960px) {
+      font-size: 0.9rem;
+      margin-top: 0.5vw;
+      bottom: -2vw;
+    }
+    @media (min-width: 961px) and (max-width: 1200px) {
+      font-size: 0.8rem;
+      margin-top: 0.3vw;
+      bottom: -1.5vw;
+    }
+    @media (min-width: 1201px) {
+      font-size: 0.6rem;
+      margin-top: 0.225vw;
+      bottom: -1.125vw;
+    }
+  }
+
+  &__button {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #222;
+    padding: 0.6vw 1.5vw;
+    border-radius: 1.5vw;
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 0.75vw;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    @media (max-width: 960px) {
+      font-size: 1.1rem;
+      padding: 2vw 4vw;
+      border-radius: 3vw;
+      margin-top: 2vw;
+    }
+    @media (min-width: 961px) and (max-width: 1200px) {
+      font-size: 1rem;
+      padding: 1.5vw 3vw;
+      border-radius: 2vw;
+      margin-top: 1.5vw;
+    }
+    @media (min-width: 1201px) {
+      font-size: 0.75rem;
+      padding: 0.6vw 1.5vw;
+      border-radius: 1.5vw;
+      margin-top: 0.75vw;
+    }
+  }
+
+  &__footerText {
+    font-size: 0.7rem;
+    margin-top: 1vw;
+    text-align: center;
+
+    @media (max-width: 960px) {
+      font-size: 1rem;
+      margin-top: 2vw;
+    }
+    @media (min-width: 961px) and (max-width: 1200px) {
+      font-size: 0.9rem;
+      margin-top: 1.5vw;
+    }
+    @media (min-width: 1201px) {
+      font-size: 0.7rem;
+      margin-top: 1vw;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 0.5vw;
+  }
+
+  &__selectArrow {
+    font-size: 0.9rem;
+    right: 0.75vw;
+  }
+
+  &__inputGroupError .authForm__input::placeholder {
+    color: #ff4d4f;
+    opacity: 1;
+  }
+}

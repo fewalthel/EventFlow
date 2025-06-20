@@ -5,4 +5,31 @@
     margin-left: 3.3vw;
     width: 94vw;
     min-height: 35vw;
+    gap: 2vw;
+}
+
+/* Мобилки: 375px - 960px */
+@media (max-width: 960px) {
+    .container_for_posters {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 4vw;
+        width: 92vw;
+        gap: 3vw;
+    }
+}
+
+/* Планшеты: 960px - 1200px */
+@media (min-width: 961px) and (max-width: 1200px) {
+    .container_for_posters {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5vw;
+    }
+}
+
+/* Десктопы: от 1200px */
+@media (min-width: 1201px) {
+    .container_for_posters {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2vw;
+    }
 }

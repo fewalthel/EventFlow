@@ -1,4 +1,4 @@
-import styles from "./index.module.scss";
+import styles from './index.module.scss';
 import {formattedDate} from "@utils/formattedDate";
 import {Event, Place, People} from "@entities/interfaces";
 
@@ -15,7 +15,7 @@ interface EventInfoProps {
 }
 
 const EventInfo = ({event}: EventInfoProps) => (
-    <>
+    <article className={styles.container}>
         <p className={styles.event_title}>{event.title}</p>
         <p className={styles.event_date}>
             <img
@@ -44,7 +44,7 @@ const EventInfo = ({event}: EventInfoProps) => (
         <button type="button" className={styles.button}>
             Купить билет
         </button>
-    </>
+    </article>
 );
 
 const getMapLink = (place: Place): string => {
@@ -57,15 +57,15 @@ interface PlaceInfoProps {
 }
 
 const PlaceInfo = ({place}: PlaceInfoProps) => (
-    <>
-        <p className={styles.event_title}>{place.title}</p>
+    <article className={styles.container}>
+        <p className={styles.event_title}>{place?.title}</p>
         <p className={styles.event_location}>
             <img
                 src="/vector-icons/location_icon_2.svg"
                 alt="location icon"
                 aria-hidden="true"
             />
-            {place.location}
+            {place?.location}
         </p>
         <a
             target="_blank"
@@ -75,7 +75,7 @@ const PlaceInfo = ({place}: PlaceInfoProps) => (
         >
             Посмотреть на карте
         </a>
-    </>
+    </article>
 );
 
 interface PeopleInfoProps {
@@ -83,22 +83,22 @@ interface PeopleInfoProps {
 }
 
 const PeopleInfo = ({people}: PeopleInfoProps) => (
-    <>
-        <h1 className={styles.people_firstName}>{people.firstName}</h1>
-        <h2 className={styles.people_about}>{people.about}</h2>
-        {(people.city) ?
+    <article className={styles.container}>
+        <h1 className={styles.people_firstName}>{people?.firstName} {people?.lastName}</h1>
+        <h2 className={styles.people_about}>{people?.about}</h2>
+        {(people?.city) ?
             (<h3 className={styles.people_city}>
                 <img
                     src="/vector-icons/location_icon_2.svg"
                     alt="location icon"
                     aria-hidden="true"/>
-                {people.city}
+                {people?.city}
             </h3>) : ''
         }
         <a className={styles.button}>
             написать
         </a>
-    </>
+    </article>
 );
 
 interface PageInfoCardProps {

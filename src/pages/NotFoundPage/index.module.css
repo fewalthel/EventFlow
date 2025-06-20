@@ -1,3 +1,22 @@
-.container {
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: calc(100vh - 12vw);
 }
+
+.container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 50vw;
+}
+
+.container > p {
+    font-size: 5rem;
+}
+
+/*.container > div {*/
+/*    background: red;*/
+/*}*/

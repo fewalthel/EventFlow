@@ -22,7 +22,7 @@ export const EventsPage: FC = () => {
 
     return (
         <main>
-            <h1>СОБЫТИЯ ПО КАТЕГОРИЯМ</h1>
+            <h1 className={styles.h1}>СОБЫТИЯ ПО КАТЕГОРИЯМ</h1>
             <div className={styles.categories_container}>
                 <CategoriesOfContent filterByCategory={filterByCategory} entity="Event"/>
             </div>

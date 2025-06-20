@@ -17,7 +17,7 @@ export const PlacePage: FC = () => {
     return place ? (
         <main className={styles.main}>
             <div className={styles.event_container}>
-                <PageEntityImage path={place.pathToImage}/>
+                <PageEntityImage path={place?.pathToImage}/>
                 <PageInfoCard entity={place}/>
             </div>
             <div className={styles.container_for_secondary_info}>
